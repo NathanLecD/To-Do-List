@@ -6,7 +6,7 @@ body {
     background-color: black;
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
     animation: stars 30s linear infinite;
-    margin: 100px 200px 50px 200px;
+    margin: 100px auto;
 }
 
 @keyframes stars {
@@ -26,14 +26,14 @@ body {
     padding: 10px;
     box-shadow: 0 0px 15px blueviolet;
     width: 400px;
-    margin: auto;
+    margin: 100px auto;
 }
 
 .list {
     width: 100%;
     max-width: 540px;
     background-color: white;
-    margin: 100px auto 20px;
+    margin: 20px auto;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
@@ -79,7 +79,7 @@ ul li {
 
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 8px 12px 0;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -94,8 +94,9 @@ ul li::before {
     background-image: url(../images/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;
-    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -35px;
 }
 
 ul li.check {
@@ -110,7 +111,8 @@ ul li.check::before {
 ul li span {
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 20px;
     height: 20px;
     font-size: 22px;
