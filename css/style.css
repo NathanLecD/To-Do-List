@@ -125,3 +125,31 @@ ul li span {
 ul li span:hover {
     background: #edeef0;
 }
+
+/* Media Queries pour les écrans de petite taille */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Ajustez la taille de police pour les petits écrans */
+    }
+
+    .container,
+    .list {
+        width: 90%;
+        /* Réduisez la largeur des conteneurs pour s'adapter aux petits écrans */
+        margin: 20px auto;
+    }
+
+    ul li::before {
+        left: -25px;
+        /* Ajustez la position de la case à cocher pour les petits écrans */
+    }
+}
+
+/* Media Queries pour les écrans de taille moyenne */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        /* Ajustez la taille de police pour les écrans de taille moyenne */
+    }
+}
