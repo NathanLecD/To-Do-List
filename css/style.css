@@ -1,155 +1,130 @@
 body {
-    overflow: auto;
-    background-size: cover;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
-    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-    animation: stars 30s linear infinite;
-    margin: 100px auto;
+  overflow: auto;
+  background-size: cover;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: stars 30s linear infinite;
+  margin: 100px auto;
+  animation-iteration-count: infinite;
 }
 
 @keyframes stars {
-    0% {
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
 
-    100% {
-        /* taille de l image */
-        background-position: 798px -798px;
-    }
+  100% {
+    /* taille de l image */
+    background-position: 798px -798px;
+  }
 }
 
 .container {
-    border-radius: 15px;
-    background-color: purple;
-    padding: 10px;
-    box-shadow: 0 0px 15px blueviolet;
-    width: 400px;
-    margin: 100px auto;
+  border-radius: 15px;
+  background-color: purple;
+  padding: 10px;
+  box-shadow: 0 0px 15px blueviolet;
+  width: 400px;
+  margin: 100px auto;
 }
 
 .list {
-    width: 100%;
-    max-width: 540px;
-    background-color: white;
-    margin: 20px auto;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
+  width: 100%;
+  max-width: 540px;
+  background-color: white;
+  margin: 20px auto;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.list li {
+  overflow-wrap: break-word;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 img {
-    width: 20px;
-    margin-left: 10px;
+  width: 20px;
+  margin-left: 10px;
 }
 
 .row {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 input {
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid black;
-    border-radius: 40px;
-    color: white;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 40px;
+  color: white;
 }
 
 button {
-    border: none;
-    outline: none;
-    padding: 10px 20px;
-    background: blueviolet;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background: blueviolet;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
 }
 
 ul li {
-
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 0;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 0;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
 }
 
 ul li::before {
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(../images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -35px;
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(../images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -35px;
 }
 
 ul li.check {
-    color: #555;
-    text-decoration: line-through;
+  color: #555;
+  text-decoration: line-through;
 }
 
 ul li.check::before {
-    background-image: url(../images/checked.png);
+  background-image: url(../images/checked.png);
 }
 
 ul li span {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    font-size: 22px;
-    color: grey;
-    line-height: 20px;
-    text-align: center;
-    border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  font-size: 22px;
+  color: grey;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
 }
 
 ul li span:hover {
-    background: #edeef0;
-}
-
-/* Media Queries pour les écrans de petite taille */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-        /* Ajustez la taille de police pour les petits écrans */
-    }
-
-    .container,
-    .list {
-        width: 90%;
-        /* Réduisez la largeur des conteneurs pour s'adapter aux petits écrans */
-        margin: 20px auto;
-    }
-
-    ul li::before {
-        left: -25px;
-        /* Ajustez la position de la case à cocher pour les petits écrans */
-    }
-}
-
-/* Media Queries pour les écrans de taille moyenne */
-@media (min-width: 601px) and (max-width: 1024px) {
-    body {
-        font-size: 16px;
-        /* Ajustez la taille de police pour les écrans de taille moyenne */
-    }
+  background: #edeef0;
 }
